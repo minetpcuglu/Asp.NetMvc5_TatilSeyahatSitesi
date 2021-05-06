@@ -1,0 +1,24 @@
+﻿@model Asp.NetMvc5_TatilSeyahatSitesi.Models.Siniflar.Blog
+@{
+    ViewBag.Title = "YeniBlogEkle";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Yeni Blog Ekleme</h2>
+<br />
+<form class="form-group" method="post">
+    @Html.LabelFor(x => x.Baslık)  @*baslıgın labelı ve text boxı*@
+    @Html.TextBoxFor(x => x.Baslık, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Tarih)  @*baslıgın labelı ve text boxı*@
+    @Html.TextBoxFor(x => x.Tarih, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.BlogImage)  @*baslıgın labelı ve text boxı*@
+    @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
+    <br />
+    @Html.LabelFor(x => x.Aciklama)  @*baslıgın labelı ve text boxı*@
+    @Html.TextAreaFor(x => x.Aciklama, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-primary"> Blog Kaydet</button>
+</form>
+

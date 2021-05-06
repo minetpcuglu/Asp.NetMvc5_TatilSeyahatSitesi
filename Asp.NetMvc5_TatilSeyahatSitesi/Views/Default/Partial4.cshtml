@@ -1,0 +1,21 @@
+﻿@using Asp.NetMvc5_TatilSeyahatSitesi.Models.Siniflar
+@model List<Blog>
+<div class="padding1">
+    <h4>Favori Yerlerim </h4>
+    <div class="box-left">
+        @foreach (var x in Model)
+        {
+            <div class="bot-img">
+                <img src="@x.BlogImage" style="width:120px; height:70px;" alt="" />
+            </div>
+            <div class="bot-desc">
+                <p> @x.Aciklama.Substring(0, 75) ...</p>
+            </div>
+
+            <div class="clear"></div>
+
+        }
+    </div>
+    @Html.Action("Partial5", "Default")
+</div>
+

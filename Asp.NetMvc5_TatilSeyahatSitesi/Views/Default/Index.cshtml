@@ -1,0 +1,105 @@
+﻿@using Asp.NetMvc5_TatilSeyahatSitesi.Models.Siniflar
+@model List<Blog>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+License: Creative Commons Attribution 3.0 Unported
+License URL: http://creativecommons.org/licenses/by/3.0/
+-->
+<!DOCTYPE HTML>
+<html>
+<body>
+    <div class="header-banner">
+        <div class="wrap">
+            <div class="banner">
+                <div class="indent">
+                    <h2 class="indent-left margin-bot">Plan the Easy Trip</h2>
+                    <div class="banner-left">
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/glass.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Restorantlar</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/flight.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Uçuşlar</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/group.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Yapılacak Aktiviteler</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="con-text">
+                            <div class="grid1-img">
+                                <img src="~/web/images/key.png" alt="">
+                            </div>
+                            <div class="grid1-desc">
+                                <p>Araç Kiralama</p>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="header_bottom_right_images">
+
+                        <div class="slider" style="width:650px; height:374px;">
+                            <ul class="rslides" id="slider1">
+                                @foreach (var resim in Model)
+                                {
+                                    <li><img src="@resim.BlogImage" alt=""></li>
+                                }
+
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class"content">
+        <div class="wrap">
+            <div class="wrapper">
+                <div class="con-top">
+                    <h3>Tatil Seyahat Bloğuma Hoşgeldiniz</h3>
+                    <p>Bu projeyi 20/04/z2021 tarihinde başlayıp 01/07/2021 tarihinde bitirmeyi hedefliyorum bu projedeki amacım gezip gördüğü yerleri sizlerle paylaşmak için kodlamasını tamamamen kendim yazdıgım Mvc5 üzerine kurulu Dinamik bir Web projesi Geliştirdim.Hem Türkiyeden hemde yurt dısından gezip gördüğümüz yerleri blog yazıları olarak paylasacağım.Umarım Beğenirsiniz Keyifli okumalar...
+                    Sağlıklı günler.</p>
+                </div>
+                @Html.Action("Partial1","Default")
+                <div class="grids">
+                    <div class="box1">
+                        @Html.Action("Partial3","Default")
+                     
+                        @Html.Action("Partial4","Default")
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+    
+</body>
+</html>
+
+

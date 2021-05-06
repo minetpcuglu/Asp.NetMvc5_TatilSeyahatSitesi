@@ -1,0 +1,13 @@
+﻿
+<div class="content-form">
+    <h3>Gidelim Gezelim Yorum Yapalım</h3>
+  
+    <form method="post">
+        <input type="text" placeholder="ID" name="BlogId" value="  @ViewBag.deger"
+               required />    @*disabled ıd oynamamak için*@ 
+        <input type="text" placeholder="Adı Soyadı" name="KullaniciAdi" required />
+        <input type="text" placeholder="Email" name="Mail" required />
+        <textarea placeholder="Mesaj" name="Yorum"></textarea>
+        <input type="submit" value="Yorum Yap" />
+    </form>
+</div>

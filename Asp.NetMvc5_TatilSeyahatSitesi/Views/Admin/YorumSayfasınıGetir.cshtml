@@ -1,0 +1,26 @@
+﻿@model Asp.NetMvc5_TatilSeyahatSitesi.Models.Siniflar.Yorumlar
+@{
+    ViewBag.Title = "YorumSayfasınıGetir";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+@using (Html.BeginForm("YorumGuncelle", "Admin", FormMethod.Post))
+{
+    <br />
+    <form class="form-group" method="post">
+        @Html.LabelFor(x => x.YorumId)
+        @Html.TextBoxFor(x => x.YorumId, new { @class = "form-control", @readonly = "readonly" })  @*@readonly="readonly" bu sekilde ıd ye işlem yapılmaz*@
+        <br />
+        @Html.LabelFor(x => x.KullaniciAdi)  @*baslıgın labelı ve text boxı*@
+        @Html.TextBoxFor(x => x.KullaniciAdi, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(x => x.Mail)
+        @Html.TextBoxFor(x => x.Mail, new { @class = "form-control" })
+        <br />
+        @Html.LabelFor(x => x.Yorum)
+        @Html.TextAreaFor(x => x.Yorum,15,1, new { @class = "form-control" })
+        <br />
+       
+        <button class="btn btn-success"> Yorum Güncelle</button>
+    </form>
+}
+
